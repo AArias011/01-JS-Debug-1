@@ -42,6 +42,23 @@ function zoomFig() {
    
 }
 
+function createEventListeners() {
+   var leftArrow = document.getElementById("leftarrow");
+   if (leftarrow.addEventListener) {
+      leftarrow.addEventListener("click", leftArrow, false);
+   } else if(leftarrow.attachEvent) {
+      leftarrow.attachEvent("onclick", leftArrow);
+   }
+}
+
+function leftArrow() {
+   alert("left arrow clicked");
+}
+
+function rightArrow() {
+   alert("right arrow clicked");
+}
+
 /* create event listeners and populate image elements */
 function setUpPage() {
    createEventListeners();
